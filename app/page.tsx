@@ -185,47 +185,86 @@ export default function HomePage() {
 
         {/* Hero section */}
         <section className="pt-24 pb-12 px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-          >
-            {/* Santa hat decoration */}
+          {/* GIFs + título: fila en desktop, columna en mobile */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
+
+            {/* GIF izquierdo — espejado */}
             <motion.div
-              animate={{ rotate: [-5, 5, -5] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="text-7xl mb-4 inline-block"
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="shrink-0 order-2 sm:order-1"
             >
-              🎅
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-red-900/60 to-transparent z-10 pointer-events-none" />
+                <img
+                  src="/bailando.gif"
+                  alt=""
+                  className="w-24 sm:w-28 md:w-36 rounded-2xl shadow-2xl shadow-red-900/50 border border-white/10"
+                  style={{ transform: 'scaleX(-1)' }}
+                />
+              </div>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-3 tracking-tight">
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  filter: 'drop-shadow(0 0 30px rgba(255,215,0,0.5))',
-                }}
-              >
-                Amigo Invisible
-              </span>
-            </h1>
-
-            <p className="text-white/60 text-xl md:text-2xl font-light max-w-lg mx-auto">
-              Organizá tu sorteo en segundos ✨
-            </p>
-
-            {/* Decorative line */}
+            {/* Título central */}
             <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="mx-auto mt-6 h-px max-w-xs"
-              style={{ background: 'linear-gradient(90deg, transparent, #FFD700, transparent)' }}
-            />
-          </motion.div>
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="flex-1 max-w-xl order-1 sm:order-2"
+            >
+              <motion.div
+                animate={{ rotate: [-5, 5, -5] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="text-6xl md:text-7xl mb-4 inline-block"
+              >
+                🎅
+              </motion.div>
+
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-3 tracking-tight">
+                <span
+                  style={{
+                    background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    filter: 'drop-shadow(0 0 30px rgba(255,215,0,0.5))',
+                  }}
+                >
+                  Amigo Invisible
+                </span>
+              </h1>
+
+              <p className="text-white/60 text-xl md:text-2xl font-light">
+                Sorteo sin fraude 🎯
+              </p>
+
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="mx-auto mt-6 h-px max-w-xs"
+                style={{ background: 'linear-gradient(90deg, transparent, #FFD700, transparent)' }}
+              />
+            </motion.div>
+
+            {/* GIF derecho */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="shrink-0 order-3"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-green-900/60 to-transparent z-10 pointer-events-none" />
+                <img
+                  src="/bailando.gif"
+                  alt=""
+                  className="w-24 sm:w-28 md:w-36 rounded-2xl shadow-2xl shadow-green-900/50 border border-white/10"
+                />
+              </div>
+            </motion.div>
+          </div>
 
           {/* Floating emojis */}
           <div className="flex justify-center gap-4 mt-6">
