@@ -1,0 +1,22 @@
+{
+  "node": {
+    "d702dc58943eb882afe80def2ce1b81d78256df1": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5Csistemas%5C%5Camigo-invisible%5C%5Capp%5C%5Cactions%5C%5CsendEmails.ts%22%2C%5B%22sendEmailsBatch%22%2C%22sendSecretSantaEmails%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    },
+    "f4e30db0157a8b39c7b5276c090f708a18e26008": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5Csistemas%5C%5Camigo-invisible%5C%5Capp%5C%5Cactions%5C%5CsendEmails.ts%22%2C%5B%22sendEmailsBatch%22%2C%22sendSecretSantaEmails%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "WqdP5LL7FPpDCBh0G3cMXYZehMj+ezczvBjp3OSjuhM="
+}
