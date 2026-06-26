@@ -193,7 +193,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="shrink-0 order-2 sm:order-1"
+              className="shrink-0 order-2 sm:order-1 hidden sm:block"
             >
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-red-900/60 to-transparent z-10 pointer-events-none" />
